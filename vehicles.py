@@ -1,6 +1,3 @@
-'doors'
-'wheels'
-'engine'
 class automobile:
     def __init__(self, make, model, mileage, price):
         self.__make = make
@@ -25,7 +22,7 @@ class automobile:
         self.__make = make
 
     def set_model(self, model):
-        self.__ = model
+        self.__model = model
 
     def set_mileage(self, mileage):
         self.__mileage = mileage
@@ -33,5 +30,29 @@ class automobile:
     def set_price(self, price):
         self.__price = price
 
-car = automobile("Gavin Pettit", "123 Maple St, Seattle, WA", 28, "555-666-7777")
-print(car.get_make())
+class Car(automobile):
+    def __init__(self, make, model, mileage, price, doors):
+        super().__init__(make, model, mileage, price)
+        self.__doors = doors
+    def set_doors(self, num_door):
+        self.__doors = num_door
+    def get_doors(self):
+        return self.__doors
+
+class truck(automobile):
+    def __init__(self, make, model, mileage, price, drive_type):
+        super().__init__(make, model, mileage, price)
+        self.__drive_type = drive_type 
+    def set_drive_type(self, drive_type):
+        self.__drive_type = drive_type
+    def get_drive_type(self):
+        return self.__drive_type
+    
+class truck(automobile):
+    def __init__(self, make, model, mileage, price, passenger_capacity):
+        super().__init__(make, model, mileage, price)
+        self.__passenger_capacity = passenger_capacity 
+    def set_passenger_capacity(self, passenger_capacity):
+        self.__passenger_capacity = passenger_capacity
+    def get_passenger_capacity(self):
+        return self.__passenger_capacity
