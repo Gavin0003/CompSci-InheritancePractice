@@ -2,7 +2,6 @@ import vehicles
 
 auto_mobile = vehicles.automobile('make', 'model', 'mileage', 'price')
 
-
 car = vehicles.Car('Tesla', 'Y', 2864, 999999, 4)
 truck = vehicles.Truck('Ford', 'F150', 2187, 9999999, 2)
 suv = vehicles.SUV('', '', 4871, 99999, 5)
